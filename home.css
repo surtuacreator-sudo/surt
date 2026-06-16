@@ -56,3 +56,69 @@
     height: 6px; 
     background: #ff4500; 
 }
+
+/* SOCIAL LINKS */
+.social-links { 
+    padding: 60px 40px; 
+    border-top: 1px solid #1a1a1a;
+}
+
+.social-links h3 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: #888;
+}
+
+/* Нова розумна сітка */
+.links-grid { 
+    display: grid; 
+    /* Змушуємо ділитися рівно на 4 колонки на ПК, а якщо не влазить (на мобілці) — адаптуємо */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px; 
+}
+
+.cyber-button { 
+    background: #050505; 
+    border: 1px solid #1a1a1a; 
+    padding: 20px; 
+    text-decoration: none; 
+    transition: 0.3s; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 85px; /* Уніфікуємо висоту, щоб картки не скакали */
+}
+
+.cyber-button:hover { 
+    border-color: #ff4500; 
+    background: #0d0d0d;
+}
+
+.btn-label { 
+    font-size: 10px; 
+    color: #555; 
+    display: block; 
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+.btn-title { 
+    color: #fff; 
+    font-weight: bold; 
+    font-size: 15px; /* Трохи зменшили, щоб довгі назви не наповзали на сусідні кнопки */
+    word-break: break-word; /* Якщо назва акаунту задовга, вона красиво перенесеться, а не вилізе за межі */
+}
+
+/* ПРАВИЛО ДЛЯ МОБІЛОК: на телефонах 4 в ряд перетворяться на кашу, тому перемикаємо на 1 або 2 колонки */
+@media (max-width: 900px) {
+    .links-grid { 
+        grid-template-columns: repeat(2, 1fr); /* На планшетах по 2 в ряд */
+    }
+}
+
+@media (max-width: 500px) {
+    .links-grid { 
+        grid-template-columns: 1fr; /* На дрібних смартфонах по одній на всю ширину */
+    }
+}
