@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СУРТ — Сектор Української Радикальної Творчості</title>
+    
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <link rel="icon" href="https://surtuacreator-sudo.github.io/surt/logo.jpg" sizes="any">
+    <meta name="application-name" content="СУРТ">
+    
+    <meta name="google-site-verification" content="CAyBt4zKbpXc2nvrkdW65Y15gcVVpModBNoilt5vsHM" />
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<div class="app-container">
+    
+    <aside class="sidebar">
+        <div class="sidebar-logo-container"> 
+            <img src="logo.jpg" alt="СУРТ" class="sidebar-logo">
+        </div>
+    </aside>
+
+    <main class="main-content">
+        
+        <section class="banner">
+            <h1 class="handwritten">
+                СЕКТОР УКРАЇНСЬКОЇ<br>
+                <span class="red">РАДИКАЛЬНОЇ</span> ТВОРЧОСТІ
+            </h1>
+        </section>
+
+        <section class="description">
+            <p><strong>СУРТ (Сектор Української Радикальної Творчості)</strong> — це спільнота митців, яка має на меті поширення української культури та історії в Україні та закордоном.</p>
+            
+            <h3>На нашому сайті ви зможете:</h3>
+            <ul class="features-list">
+                <li>дізнатися про наших митців;</li>
+                <li>дізнатися про нас більше;</li>
+                <li>новини СУРТ;</li>
+                <li>побачити роботи наших митців;</li>
+                <li>читати наш "Вісник";</li>
+                <li>та інше.</li>
+            </ul>
+        </section>
+
+        <section class="we-are-for">
+            <h3>МИ ДЛЯ:</h3>
+            <ul class="we-for-list">
+                <li>ПИСЬМЕННИКІВ</li>
+                <li>ХУДОЖНИКІВ</li>
+                <li>ПРОГРАМІСТІВ</li>
+                <li>МУЗИКАНТІВ</li>
+                <li>ЧИТАЧІВ</li>
+                <li>ТА ІНШИХ МИТЦІВ</li>
+            </ul>
+        </section>
+
+        <section class="join-section">
+            <h3 class="join-title">СТАТИ ЧАСТИНОЮ СЕКТОРУ</h3>
+            <p class="join-text">Ми шукаємо тих, хто готовий творити нову українську культуру разом із нами.</p>
+            
+            <div class="join-options-container">
+                <a href="https://t.me/SURTua" class="flag-btn tg-side" target="_blank">
+                    <span class="btn-info">СПІЛЬНОТА</span>
+                    <span class="btn-main">ДОЄДНАТИСЯ В ТГ</span>
+                </a>
+
+                <a href="https://discord.gg/DEYCphnSz" class="flag-btn ds-side" target="_blank">
+                    <span class="btn-info">ДІСКОРД-СЕРВЕР</span>
+                    <span class="btn-main">ДОЄДНАТИСЯ В ДС</span>
+                </a>
+            </div>
+
+            <div class="contact-leader">
+                <span class="contact-label">НАПИСАТИ ОЧІЛЬНИКУ:</span>
+                <div class="contact-links">
+                    <a href="https://t.me/ShadowClan_LRW" target="_blank" title="ПОСИЛАННЯ НА ТЕЛЕГРАМ">TГ</a>
+                    <a href="https://discordapp.com/users/1506724782027313235" target="_blank" title="ПОСИЛАННЯ НА ДІСКОРД">ДС</a>
+                    <a href="https://arkush.net/user/14381" target="_blank" title="ПОСИЛАННЯ НА АРКУШ">AРКУШ</a>
+                    <a href="https://www.wattpad.com/user/ShadowClan_LRW" target="_blank" title="ПОСИЛАННЯ НА ВАТПАД">ВАТПАД</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="social-links">
+            <h3>НАШІ МЕРЕЖІ:</h3>
+            <div class="links-grid">
+                <a href="https://t.me/Visnuk_SURT" target="_blank" class="cyber-button">
+                    <span class="btn-label">ТЕЛЕГРАМ-КАНАЛ</span>
+                    <span class="btn-title">Vysnuk_SURT</span>
+                </a>
+                <a href="https://arkush.net/user/19163" target="_blank" class="cyber-button">
+                    <span class="btn-label">АРКУШ</span>
+                    <span class="btn-title">СУРТ</span>
+                </a>
+                <a href="https://www.tiktok.com/@surt_ua" target="_blank" class="cyber-button">
+                    <span class="btn-label">TIKTOK</span>
+                    <span class="btn-title">SURT_ua</span>
+                </a>
+                <a href="https://www.instagram.com/surt_comunity" target="_blank" class="cyber-button">
+                    <span class="btn-label">ІНСТАГРАМ</span>
+                    <span class="btn-title">surt_comunity</span>
+                </a>
+            </div>
+        </footer>
+        
+    </main>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const arrows = document.querySelectorAll('.dropdown-toggle-arrow');
+    arrows.forEach(arrow => {
+        arrow.addEventListener('click', function(e) {
+            const dropdown = this.closest('.dropdown');
+            if(dropdown) dropdown.classList.toggle('open');
+        });
+    });
+});
+</script>
+
+</body>
+</html>

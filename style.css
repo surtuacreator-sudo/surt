@@ -1,0 +1,131 @@
+/* ГЛОБАЛЬНА БАЗА */
+body { 
+    background-color: #000; 
+    color: #fff; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+}
+
+.app-container { 
+    display: flex; 
+    min-height: 100vh; 
+}
+
+.main-content { 
+    flex: 1; 
+}
+
+.red { 
+    color: #ff4500; 
+}
+
+/* SIDEBAR & NAV */
+.sidebar { 
+    width: 200px; 
+    background: #0a0a0a; 
+    border-right: 1px solid #1a1a1a; 
+    padding: 20px; 
+    flex-shrink: 0; 
+}
+
+/* Контейнер для логотипу, щоб центрувати його за потреби */
+.sidebar-logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+.sidebar-logo { 
+    max-width: 80px; 
+    height: auto;
+    /* border-radius прибрали, тепер воно квадратне і суворе */
+    object-fit: contain; /* Зберігає оригінальні пропорції без обрізання */
+}
+
+/* Базові посилання в сайдбарі */
+.sidebar nav a { 
+    display: block; 
+    color: #888; 
+    text-decoration: none; 
+    padding: 12px 10px; /* Додали паддінг зліва одразу, щоб текст не стрибав */
+    font-size: 14px; 
+    transition: 0.3s; 
+    border-left: 3px solid transparent; /* Заготівля під майбутню лінію */
+}
+
+/* Анімація наведення без стрибків тексту */
+.sidebar nav a.active,
+.sidebar nav a:hover, 
+.dropdown-toggle:hover {
+    color: #fff !important;
+    border-left: 3px solid #ff4500;
+    background: linear-gradient(to right, #ff450011, transparent);
+}
+
+.dropdown-toggle:hover .arrow {
+    color: #ff4500;
+}
+
+/* DROPDOWN (ВИПАДАЮЧЕ МЕНЮ) */
+.dropdown-content { 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.3s ease-out; 
+    display: flex; 
+    flex-direction: column; 
+    padding-left: 15px; 
+}
+
+.dropdown.open .dropdown-content { 
+    max-height: 200px; 
+    margin-top: 10px; 
+}
+
+.dropdown.open .arrow { 
+    transform: rotate(180deg); 
+    display: inline-block; 
+}
+
+.sub-item { 
+    color: #666; 
+    text-decoration: none; 
+    font-size: 13px; 
+    padding: 6px 0; 
+    transition: color 0.2s;
+}
+
+.sub-item:hover { 
+    color: #ff4500; 
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.nav-item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 8px; 
+    cursor: pointer;
+}
+
+/* Стрілочка для розкриття */
+.dropdown-toggle-arrow {
+    display: inline-block; /* КРИТИЧНО: без цього тег span не буде крутитися */
+    color: #888;
+    padding: 10px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.dropdown-toggle-arrow:hover {
+    color: #ff4500;
+}
+
+/* Коли список відкритий, плавно повертаємо стрілочку */
+.dropdown.open .dropdown-toggle-arrow {
+    transform: rotate(180deg);
+    color: #ff4500;
+}
