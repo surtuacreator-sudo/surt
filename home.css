@@ -274,18 +274,42 @@
     .join-options-container {
         flex-direction: column;
         gap: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 10px; /* Щоб блоки не липли до країв екрану */
     }
     .tg-side {
         margin-right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .ds-side { /* Додаємо і для Дискорду центрування */
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
     .flag-btn {
         width: 100%;
         max-width: 320px;
+        box-sizing: border-box; /* Змушує паддінги рахуватися всередину кнопки */
     }
 }
 
 @media (max-width: 500px) {
     .links-grid { 
         grid-template-columns: 1fr; 
+    }
+
+    /* ФІКС КОНКРЕТНО ДЛЯ ТВОРГО ТЕЛЕФОНУ (менше 500px) */
+    .flag-btn {
+        max-width: 280px; /* Трохи зменшуємо максимальну ширину прапора, щоб його гострі кути не розривали екран */
+        font-size: 14px;  /* Трохи зменшуємо шрифт, щоб довгий текст "ДОЄДНАТИСЯ В ТГ" не вилазив */
+    }
+    
+    /* Прибираємо будь-яку можливість розпирання батьківських блоків */
+    .tg-side, .ds-side, .join-options-container {
+        max-width: 100% !important;
+        overflow: hidden;
     }
 }
