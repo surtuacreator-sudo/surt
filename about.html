@@ -1,0 +1,36 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Замінили 'surt-dropdown' на 'about-dropdown', щоб скрипт бачив меню саме цієї сторінки
+        const dropdown = document.getElementById('about-dropdown');
+        const toggle = dropdown ? dropdown.querySelector('.dropdown-toggle') : null;
+
+        if (toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdown.classList.toggle('open');
+            });
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const arrows = document.querySelectorAll('.dropdown-toggle-arrow');
+        arrows.forEach(arrow => {
+            arrow.addEventListener('click', function(e) {
+                const dropdown = this.closest('.dropdown');
+                dropdown.classList.toggle('open');
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const path = window.location.pathname;
+        if (path.includes('about.html') || path.includes('statut.html') || path.includes('activity.html')) {
+            const aboutDropdown = document.getElementById('about-dropdown');
+            if (aboutDropdown) aboutDropdown.classList.add('open');
+        }
+        if (path.includes('writers.html')) {
+            const surtDropdown = document.getElementById('surt-dropdown');
+            if (surtDropdown) surtDropdown.classList.add('open');
+        }
+    });
+</script>
