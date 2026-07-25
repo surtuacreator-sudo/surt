@@ -5,20 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>СУРТ — Сектор Української Радикальної Творчості</title>
     
-    <!-- НОВІ ІКОНКИ ДЛЯ БРАУЗЕРІВ ТА GOOGLE (ЗАМІСТЬ СТАРИХ ДВОХ РЯДКІВ) -->
-    <link rel="icon" href="android-icon-48x48.png" type="image/png" sizes="48x48">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <link rel="icon" href="https://surtuacreator-sudo.github.io/surt/logo.jpg" sizes="any">
     <meta name="application-name" content="СУРТ">
+    
     <meta name="google-site-verification" content="CAyBt4zKbpXc2nvrkdW65Y15gcVVpModBNoilt5vsHM" />
     
-    <!-- Тут усе залишаємо як є, для соцмереж великий logo.jpg підходить ідеально -->
-    <meta property="og:title" content="СУРТ — Сектор Української Радикальної Творчості">
-    <meta property="og:description" content="Спільнота українських митців, яка має на меті поширення культури та історії.">
-    <meta property="og:image" content="https://surtuacreator-sudo.github.io/surt/logo.jpg">
-    <meta property="og:url" content="https://surtuacreator-sudo.github.io/surt/">
-    <meta property="og:type" content="website">
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="home.css">
 </head>
@@ -30,6 +22,16 @@
         <div class="sidebar-logo-container"> 
             <img src="logo.jpg" alt="СУРТ" class="sidebar-logo">
         </div>
+        <!-- ДОДАНИЙ БЛОК НАВІГАЦІЇ -->
+        <nav>
+            <a href="index.html" class="nav-item active">КОРДОН</a> 
+            <div class="dropdown" id="about-dropdown">
+                <div class="nav-item-wrapper">
+                    <a href="about.html" class="nav-item">ПРО НАС</a>
+                </div>
+
+            </div>
+        </nav>
     </aside>
 
     <main class="main-content">
@@ -140,6 +142,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if(dropdown) dropdown.classList.toggle('open');
         });
     });
+});
+
+// Додатковий авто-розкрив списку, якщо знаходимось на внутрішніх сторінках
+document.addEventListener('DOMContentLoaded', function() {
+    const path = window.location.pathname;
+    if (path.includes('about.html') || path.includes('statut.html') || path.includes('activity.html')) {
+        const aboutDropdown = document.getElementById('about-dropdown');
+        if (aboutDropdown) aboutDropdown.classList.add('open');
+    }
 });
 </script>
 
